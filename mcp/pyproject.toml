@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "super-blender-mcp-next"
+version = "1.0.0"
+description = "Agent-native control layer for Blender built on the official MCP bridge"
+requires-python = ">=3.10"
+dependencies = [
+    "docutils",
+    # v1.0.0 imports ``mcp.server.fastmcp``, which was removed in MCP SDK 2.x.
+    "mcp[cli]>=1.2.0,<2",
+    "pydantic>=2.0",
+    "pyyaml",
+]
+
+[project.scripts]
+super-blender-mcp = "blmcp:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+"blmcp" = [
+    # MCP prompt definitions.
+    "data/prompts.yml",
+    # Blender Python API reference.
+    "data/api/**/*.rst",
+    # Blender user manual.
+    "data/manual/**/*.rst",
+]
+
+[tool.mypy]
+mypy_path = "stubs"
+
+[[tool.mypy.overrides]]
+module = [
+    "blmcp", "blmcp.*",
+    "blender_mcp_addon", "blender_mcp_addon.*",
+]
+strict = true
+
+[[tool.mypy.overrides]]
+module = [
+    "bpy", "bpy.*",
+    "mcp", "mcp.*",
+]
+ignore_missing_imports = true
+
+[tool.ruff]
+extend-exclude = ["blmcp/data"]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.autopep8]
+max_line_length = 120
+ignore = [
+    "E721",
+    "E722",
+    "E402",
+    "W690",
+]
+aggressive = 2
