@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Build a 3D model of Noto emoji U+1F416 (pig) with super-blender-mcp-next.
 
-Example script and evidence for docs/agent-experience-review.md: imports the
+Example script and evidence for the agent-experience review (AX-01..AX-08): imports the
 SVG as curves in Blender, extrudes + joins them into one mesh, colorizes from
 the SVG fill materials, then uses the structured tools (camera_frame,
 light_create_or_update, modifier_manage, render_configure, render_preview)

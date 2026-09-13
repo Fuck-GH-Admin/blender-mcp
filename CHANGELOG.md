@@ -5,8 +5,7 @@
 
 ## 1.1.1 — 2026-09-13
 
-依据 [Agent 实战体验评审](docs/agent-experience-review.md)（两项真实任务、75 次工具调用的
-实证）落实全部八项改进：
+依据 Agent 实战体验评审（两项真实任务、75 次工具调用的实证）落实全部八项改进：
 
 - AX-01：新增 `execute_blender_code_unrestricted`，仅随 `--enable-unrestricted` 显式启用；
   safe guard 拒绝可信代码时不再需要重启 Server 丢失会话状态。
@@ -38,7 +37,7 @@
   自带 blend 文件 append。
 - 使用本插件完成 Noto Emoji U+1F416 的 SVG → 3D 模型实战（导入、挤出、材质、打光、
   渲染全链路），并将过程中发现的操作层问题整理为
-  [Agent 实战体验评审](docs/agent-experience-review.md)（AX-01～AX-08）；
+  Agent 实战体验评审（AX-01～AX-08）；
   可复现脚本与证据（渲染图、.blend、会话 metrics）收入 `examples/emoji_3d/`。
 - 文档补充 pack 安全边界（第三方元数据按 prompt injection 面处理）与 benchmark 用法。
 

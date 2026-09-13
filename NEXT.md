@@ -14,8 +14,6 @@
 - [安装、运行与维护](docs/operations.md)：Client 配置、环境变量、测试、指标与发布约定。
 - [Structured Tool API](docs/api.md)：所有新工具的参数、结果和错误契约。
 - [上游兼容性](docs/upstream-compatibility.md)：已审阅官方 tag、迁移成本和回移准则。
-- [开源参考实现](docs/open-source-references.md)：已克隆项目、能力覆盖和不可直接合并的边界。
-- [Agent 实战体验评审](docs/agent-experience-review.md)：真机会话中发现的问题清单（AX-01～AX-08），含实证、设计依据与实施顺序。
 - [变更记录](CHANGELOG.md)：本项目自己的版本记录；上游版本另行追踪。
 
 ## 当前能力
@@ -97,8 +95,7 @@ uv run --project mcp --with pytest python -m pytest \
 
 离线 schema tax 对照与 JSONL 运行聚合已经落地
 （`python -m blmcp.metrics.context_benchmark`，见 `docs/operations.md`）。真机使用中
-发现的操作层改进项已整理为 [Agent 实战体验评审](docs/agent-experience-review.md)，
-AX-01～AX-08 已在 1.1.1 全部落实。剩余工作：
+真机使用中发现的操作层改进项（AX-01～AX-08）已在 1.1.1 全部落实。剩余工作：
 
 1. 用真实 Blender + 模型跑一次 Agent-in-the-loop 的官方/新层 A/B benchmark（对照指标
    已就绪，缺受控运行环境）。

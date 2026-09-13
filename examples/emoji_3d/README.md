@@ -1,7 +1,7 @@
 # Emoji 3D 化示例与评审证据
 
 用本插件把 Noto Emoji **U+1F416（🐖 PIG）** 的 SVG 做成 3D 模型的完整可复现案例，同时是
-[Agent 实战体验评审](../../docs/agent-experience-review.md)（AX-01～AX-08）的实证材料：
+Agent 实战体验评审（AX-01～AX-08）的实证材料：
 评审中引用的 safe guard 拦截、相机创建断层、设置序列往返等证据全部来自运行本脚本的过程。
 
 ## 文件
